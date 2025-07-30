@@ -7,57 +7,46 @@ export type Json =
   | Json[]
 
 export type Database = {
-  graphql_public: {
-    Tables: {
-      [_ in never]: never
-    }
-    Views: {
-      [_ in never]: never
-    }
-    Functions: {
-      graphql: {
-        Args: {
-          variables?: Json
-          operationName?: string
-          query?: string
-          extensions?: Json
-        }
-        Returns: Json
-      }
-    }
-    Enums: {
-      [_ in never]: never
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
+  // Allows to automatically instanciate createClient with right options
+  // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
+  __InternalSupabase: {
+    PostgrestVersion: "12.2.12 (cd3cf9e)"
   }
   public: {
     Tables: {
       profiles: {
         Row: {
           avatar_url: string | null
-          created_at: string | null
-          email: string
-          full_name: string | null
+          bio: string | null
+          created_at: string
+          display_name: string | null
           id: string
-          updated_at: string | null
+          status: string
+          updated_at: string
+          user_id: string
+          username: string
         }
         Insert: {
           avatar_url?: string | null
-          created_at?: string | null
-          email: string
-          full_name?: string | null
-          id: string
-          updated_at?: string | null
+          bio?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+          username: string
         }
         Update: {
           avatar_url?: string | null
-          created_at?: string | null
-          email?: string
-          full_name?: string | null
+          bio?: string | null
+          created_at?: string
+          display_name?: string | null
           id?: string
-          updated_at?: string | null
+          status?: string
+          updated_at?: string
+          user_id?: string
+          username?: string
         }
         Relationships: []
       }
@@ -195,11 +184,7 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
-  graphql_public: {
-    Enums: {},
-  },
   public: {
     Enums: {},
   },
 } as const
-

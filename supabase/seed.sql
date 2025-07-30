@@ -56,7 +56,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "John Doe", "avatar_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "John Doe", "username": "johndoe", "avatar_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -89,7 +89,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Jane Smith", "avatar_url": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Jane Smith", "username": "janesmith", "avatar_url": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -122,7 +122,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Mike Johnson", "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Mike Johnson", "username": "mikejohnson", "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -155,7 +155,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Sarah Wilson", "avatar_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Sarah Wilson", "username": "sarahwilson", "avatar_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -188,7 +188,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "David Brown", "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "David Brown", "username": "davidbrown", "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -221,7 +221,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Emily Davis", "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Emily Davis", "username": "emilydavis", "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -254,7 +254,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Alex Miller", "avatar_url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Alex Miller", "username": "alexmiller", "avatar_url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -287,7 +287,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Lisa Garcia", "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Lisa Garcia", "username": "lisagarcia", "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -320,7 +320,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Tom Rodriguez", "avatar_url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Tom Rodriguez", "username": "tomrodriguez", "avatar_url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -353,7 +353,7 @@ INSERT INTO auth.users (
     NULL,
     NULL,
     '{"provider": "email", "providers": ["email"]}',
-    '{"full_name": "Rachel Martinez", "avatar_url": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"}',
+    '{"full_name": "Rachel Martinez", "username": "rachelmartinez", "avatar_url": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"}',
     NULL,
     timezone('utc'::text, now()),
     timezone('utc'::text, now()),
@@ -480,3 +480,75 @@ INSERT INTO auth.identities (
     timezone('utc'::text, now()),
     timezone('utc'::text, now())
   );
+
+-- Insert additional profile data for testing
+-- Note: Profiles are automatically created by the trigger with usernames, but we can update them with additional data
+UPDATE public.profiles 
+SET 
+    display_name = 'John Doe',
+    bio = 'Software engineer passionate about building great user experiences.',
+    status = 'active'
+WHERE user_id = '11111111-1111-1111-1111-111111111111';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Jane Smith',
+    bio = 'Product designer focused on creating intuitive interfaces.',
+    status = 'active'
+WHERE user_id = '22222222-2222-2222-2222-222222222222';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Mike Johnson',
+    bio = 'Full-stack developer with expertise in React and Node.js.',
+    status = 'active'
+WHERE user_id = '33333333-3333-3333-3333-333333333333';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Sarah Wilson',
+    bio = 'UX researcher helping teams build better products.',
+    status = 'active'
+WHERE user_id = '44444444-4444-4444-4444-444444444444';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'David Brown',
+    bio = 'DevOps engineer specializing in cloud infrastructure.',
+    status = 'active'
+WHERE user_id = '55555555-5555-5555-5555-555555555555';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Emily Davis',
+    bio = 'Frontend developer creating beautiful web applications.',
+    status = 'active'
+WHERE user_id = '66666666-6666-6666-6666-666666666666';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Alex Miller',
+    bio = 'Backend developer building scalable APIs.',
+    status = 'active'
+WHERE user_id = '77777777-7777-7777-7777-777777777777';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Lisa Garcia',
+    bio = 'QA engineer ensuring software quality and reliability.',
+    status = 'active'
+WHERE user_id = '88888888-8888-8888-8888-888888888888';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Tom Rodriguez',
+    bio = 'Data scientist working on machine learning projects.',
+    status = 'active'
+WHERE user_id = '99999999-9999-9999-9999-999999999999';
+
+UPDATE public.profiles 
+SET 
+    display_name = 'Rachel Martinez',
+    bio = 'Project manager coordinating development teams.',
+    status = 'active'
+WHERE user_id = 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa';
