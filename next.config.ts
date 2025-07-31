@@ -21,6 +21,13 @@ const nextConfig: NextConfig = {
         port: '54321',
         pathname: '/storage/v1/object/public/**',
       },
+      // Only allow Unsplash in development
+      ...(process.env.NODE_ENV === 'development' ? [{
+        protocol: 'https' as const,
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      }] : []),
     ],
   },
 };

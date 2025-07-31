@@ -1,6 +1,7 @@
 'use client'
 
 import { UserProfile } from '@/components/auth/UserProfile'
+import PointsDisplay from '@/components/points/PointsDisplay'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
 
@@ -31,6 +32,17 @@ export default function Home() {
               <p className="text-lg text-gray-600">
                 You are signed in as <span className="font-semibold">{user.email}</span>
               </p>
+              <div className="mt-4">
+                <PointsDisplay variant="detailed" />
+              </div>
+            </div>
+            <div className="flex justify-center mb-8">
+              <Link
+                href="/points"
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              >
+                View Points Details
+              </Link>
             </div>
             <UserProfile />
           </div>

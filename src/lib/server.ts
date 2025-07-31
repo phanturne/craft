@@ -32,3 +32,23 @@ export const createClient = async () => {
     }
   );
 };
+
+// Admin client that bypasses RLS
+export const createAdminClient = async () => {
+  return createServerClient<Database>(
+    // biome-ignore lint: Forbidden non-null assertion.
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    // biome-ignore lint: Forbidden non-null assertion.
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return [];
+        },
+        setAll() {
+          // No-op for admin client
+        },
+      },
+    }
+  );
+};
