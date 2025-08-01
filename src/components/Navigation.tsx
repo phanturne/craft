@@ -12,23 +12,23 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200">
+    <nav className="bg-background shadow-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
-            <Link href="/" className="text-xl font-bold text-gray-900">
+            <Link href="/" className="text-xl font-bold text-foreground">
               Craft
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <Link
                 href="/chat"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Chat
               </Link>
               <Link
                 href="/points"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Points
               </Link>
@@ -36,13 +36,13 @@ export default function Navigation() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 bg-gray-50 px-3 py-1 rounded-lg">
-              <span className="text-sm text-gray-500">Points:</span>
+            <div className="flex items-center space-x-2 bg-muted px-3 py-1 rounded-lg">
+              <span className="text-sm text-muted-foreground">Points:</span>
               <PointsDisplay variant="compact" showLabel={false} />
             </div>
             <button
               onClick={() => signOut()}
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Sign Out
             </button>

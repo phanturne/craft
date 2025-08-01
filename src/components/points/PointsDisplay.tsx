@@ -19,7 +19,7 @@ export default function PointsDisplay({
   if (loading) {
     return (
       <div className={`flex items-center ${className}`}>
-        <div className="animate-pulse bg-gray-200 h-4 w-8 rounded"></div>
+        <div className="animate-pulse bg-muted h-4 w-8 rounded"></div>
       </div>
     )
   }
@@ -27,9 +27,9 @@ export default function PointsDisplay({
   if (variant === 'compact') {
     return (
       <div className={`flex items-center space-x-1 ${className}`}>
-        <span className="text-sm font-medium text-gray-900">{points}</span>
+        <span className="text-sm font-medium text-foreground">{points}</span>
         {showLabel && (
-          <span className="text-xs text-gray-500">pts</span>
+          <span className="text-xs text-muted-foreground">pts</span>
         )}
       </div>
     )
@@ -38,9 +38,9 @@ export default function PointsDisplay({
   return (
     <div className={`flex items-center space-x-2 ${className}`}>
       <div className="flex items-center space-x-1">
-        <span className="text-lg font-bold text-blue-600">{points}</span>
+        <span className="text-lg font-bold text-primary">{points}</span>
         {showLabel && (
-          <span className="text-sm text-gray-600">points</span>
+          <span className="text-sm text-muted-foreground">points</span>
         )}
       </div>
     </div>

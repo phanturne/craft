@@ -49,17 +49,17 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="flex flex-col h-screen bg-background">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4">
-        <h1 className="text-2xl font-bold text-gray-900">AI Chat</h1>
-        <p className="text-gray-600 mt-1">Powered by DeepSeek Chat</p>
+      <div className="bg-background border-b border-border px-6 py-4">
+        <h1 className="text-2xl font-bold text-foreground">AI Chat</h1>
+        <p className="text-muted-foreground mt-1">Powered by DeepSeek Chat</p>
       </div>
 
       {/* Messages Container */}
       <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
         {messages.length === 0 ? (
-          <div className="text-center text-gray-500 mt-8">
+          <div className="text-center text-muted-foreground mt-8">
             <div className="text-4xl mb-4">💬</div>
             <p className="text-lg">Start a conversation with AI</p>
             <p className="text-sm mt-2">Ask anything and get intelligent responses</p>
@@ -75,8 +75,8 @@ export default function ChatPage() {
               <div
                 className={`max-w-[80%] rounded-lg px-4 py-3 ${
                   message.role === 'user'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white border border-gray-200 text-gray-900'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-card border border-border text-card-foreground'
                 }`}
               >
                 <div className="whitespace-pre-wrap">{message.parts.find(part => part.type === 'text')?.text || ''}</div>
@@ -87,14 +87,14 @@ export default function ChatPage() {
         
         {status === 'streaming' && (
           <div className="flex justify-start">
-            <div className="bg-white border border-gray-200 rounded-lg px-4 py-3">
+            <div className="bg-card border border-border rounded-lg px-4 py-3">
               <div className="flex items-center space-x-2">
                 <div className="flex space-x-1">
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                 </div>
-                <span className="text-gray-500 text-sm">AI is thinking...</span>
+                <span className="text-muted-foreground text-sm">AI is thinking...</span>
               </div>
             </div>
           </div>
@@ -102,20 +102,20 @@ export default function ChatPage() {
       </div>
 
       {/* Input Form */}
-      <div className="bg-white border-t border-gray-200 px-6 py-4">
+      <div className="bg-background border-t border-border px-6 py-4">
         <form onSubmit={handleSubmit} className="flex space-x-4">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Type your message..."
-            className="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="flex-1 border border-input rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent bg-background text-foreground placeholder:text-muted-foreground"
             disabled={status === 'streaming'}
           />
           <button
             type="submit"
             disabled={!input.trim() || status === 'streaming'}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {status === 'streaming' ? 'Sending...' : 'Send'}
           </button>
@@ -123,7 +123,7 @@ export default function ChatPage() {
             <button
               type="button"
               onClick={stop}
-              className="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors"
+              className="bg-destructive text-destructive-foreground px-6 py-3 rounded-lg font-medium hover:bg-destructive/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-colors"
             >
               Stop
             </button>
