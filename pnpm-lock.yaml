@@ -10,19 +10,22 @@ importers:
     dependencies:
       '@ai-sdk/react':
         specifier: ^2.0.0
-        version: 2.0.0(react@19.1.0)(zod@3.25.76)
+        version: 2.0.0(react@19.1.0)(zod@4.0.14)
       '@openrouter/ai-sdk-provider':
         specifier: 1.0.0-beta.6
-        version: 1.0.0-beta.6(ai@5.0.0(zod@3.25.76))(zod@3.25.76)
+        version: 1.0.0-beta.6(ai@5.0.0(zod@4.0.14))(zod@4.0.14)
       '@supabase/ssr':
         specifier: ^0.6.1
         version: 0.6.1(@supabase/supabase-js@2.52.1)
       '@supabase/supabase-js':
         specifier: ^2.52.1
         version: 2.52.1
+      '@vercel/functions':
+        specifier: ^2.2.7
+        version: 2.2.7
       ai:
         specifier: ^5.0.0
-        version: 5.0.0(zod@3.25.76)
+        version: 5.0.0(zod@4.0.14)
       next:
         specifier: 15.4.4
         version: 15.4.4(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -35,6 +38,12 @@ importers:
       resumable-stream:
         specifier: ^2.2.3
         version: 2.2.3
+      swr:
+        specifier: ^2.3.4
+        version: 2.3.4(react@19.1.0)
+      zod:
+        specifier: ^4.0.14
+        version: 4.0.14
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -702,6 +711,19 @@ packages:
     resolution: {integrity: sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==}
     cpu: [x64]
     os: [win32]
+
+  '@vercel/functions@2.2.7':
+    resolution: {integrity: sha512-3GzufulXUykEqB4/LdQEHuRLlOPqE6XK36gmr85BwBvm9zwkrrOcb8NTtXjUIRfxJRz+Yk4YBSa8Bo84foYXdA==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@aws-sdk/credential-provider-web-identity': '*'
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-web-identity':
+        optional: true
+
+  '@vercel/oidc@2.0.0':
+    resolution: {integrity: sha512-U0hncpXof7gC9xtmSrjz6vrDqdwJXi8z/zSc9FyS80AoXKfCZtpkBz9gtL3x30Agmpxpwe35P1W2dP9Epa/RGA==}
+    engines: {node: '>= 18'}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2026,38 +2048,38 @@ packages:
     peerDependencies:
       zod: ^3.24.1
 
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+  zod@4.0.14:
+    resolution: {integrity: sha512-nGFJTnJN6cM2v9kXL+SOBq3AtjQby3Mv5ySGFof5UGRHrRioSJ5iG680cYNjE/yWk671nROcpPj4hAS8nyLhSw==}
 
 snapshots:
 
-  '@ai-sdk/gateway@1.0.0(zod@3.25.76)':
+  '@ai-sdk/gateway@1.0.0(zod@4.0.14)':
     dependencies:
       '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.0(zod@3.25.76)
-      zod: 3.25.76
+      '@ai-sdk/provider-utils': 3.0.0(zod@4.0.14)
+      zod: 4.0.14
 
-  '@ai-sdk/provider-utils@3.0.0(zod@3.25.76)':
+  '@ai-sdk/provider-utils@3.0.0(zod@4.0.14)':
     dependencies:
       '@ai-sdk/provider': 2.0.0
       '@standard-schema/spec': 1.0.0
       eventsource-parser: 3.0.3
-      zod: 3.25.76
-      zod-to-json-schema: 3.24.6(zod@3.25.76)
+      zod: 4.0.14
+      zod-to-json-schema: 3.24.6(zod@4.0.14)
 
   '@ai-sdk/provider@2.0.0':
     dependencies:
       json-schema: 0.4.0
 
-  '@ai-sdk/react@2.0.0(react@19.1.0)(zod@3.25.76)':
+  '@ai-sdk/react@2.0.0(react@19.1.0)(zod@4.0.14)':
     dependencies:
-      '@ai-sdk/provider-utils': 3.0.0(zod@3.25.76)
-      ai: 5.0.0(zod@3.25.76)
+      '@ai-sdk/provider-utils': 3.0.0(zod@4.0.14)
+      ai: 5.0.0(zod@4.0.14)
       react: 19.1.0
       swr: 2.3.4(react@19.1.0)
       throttleit: 2.1.0
     optionalDependencies:
-      zod: 3.25.76
+      zod: 4.0.14
 
   '@alloc/quick-lru@5.2.0': {}
 
@@ -2294,10 +2316,10 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@openrouter/ai-sdk-provider@1.0.0-beta.6(ai@5.0.0(zod@3.25.76))(zod@3.25.76)':
+  '@openrouter/ai-sdk-provider@1.0.0-beta.6(ai@5.0.0(zod@4.0.14))(zod@4.0.14)':
     dependencies:
-      ai: 5.0.0(zod@3.25.76)
-      zod: 3.25.76
+      ai: 5.0.0(zod@4.0.14)
+      zod: 4.0.14
 
   '@opentelemetry/api@1.9.0': {}
 
@@ -2612,6 +2634,12 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
+  '@vercel/functions@2.2.7':
+    dependencies:
+      '@vercel/oidc': 2.0.0
+
+  '@vercel/oidc@2.0.0': {}
+
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
       acorn: 8.15.0
@@ -2620,13 +2648,13 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ai@5.0.0(zod@3.25.76):
+  ai@5.0.0(zod@4.0.14):
     dependencies:
-      '@ai-sdk/gateway': 1.0.0(zod@3.25.76)
+      '@ai-sdk/gateway': 1.0.0(zod@4.0.14)
       '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.0(zod@3.25.76)
+      '@ai-sdk/provider-utils': 3.0.0(zod@4.0.14)
       '@opentelemetry/api': 1.9.0
-      zod: 3.25.76
+      zod: 4.0.14
 
   ajv@6.12.6:
     dependencies:
@@ -4203,8 +4231,8 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-to-json-schema@3.24.6(zod@3.25.76):
+  zod-to-json-schema@3.24.6(zod@4.0.14):
     dependencies:
-      zod: 3.25.76
+      zod: 4.0.14
 
-  zod@3.25.76: {}
+  zod@4.0.14: {}

@@ -14,6 +14,65 @@ export type Database = {
   }
   public: {
     Tables: {
+      chats: {
+        Row: {
+          created_at: string
+          id: string
+          title: string
+          updated_at: string
+          user_id: string
+          visibility: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          title: string
+          updated_at?: string
+          user_id: string
+          visibility?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+          visibility?: string
+        }
+        Relationships: []
+      }
+      messages: {
+        Row: {
+          chat_id: string
+          created_at: string
+          id: string
+          parts: Json
+          role: string
+        }
+        Insert: {
+          chat_id: string
+          created_at?: string
+          id?: string
+          parts?: Json
+          role: string
+        }
+        Update: {
+          chat_id?: string
+          created_at?: string
+          id?: string
+          parts?: Json
+          role?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "messages_chat_id_fkey"
+            columns: ["chat_id"]
+            isOneToOne: false
+            referencedRelation: "chats"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -106,6 +165,45 @@ export type Database = {
           user_id?: string
         }
         Relationships: []
+      }
+      votes: {
+        Row: {
+          chat_id: string
+          created_at: string
+          is_upvoted: boolean
+          message_id: string
+          user_id: string
+        }
+        Insert: {
+          chat_id: string
+          created_at?: string
+          is_upvoted: boolean
+          message_id: string
+          user_id: string
+        }
+        Update: {
+          chat_id?: string
+          created_at?: string
+          is_upvoted?: boolean
+          message_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "votes_chat_id_fkey"
+            columns: ["chat_id"]
+            isOneToOne: false
+            referencedRelation: "chats"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "votes_message_id_fkey"
+            columns: ["message_id"]
+            isOneToOne: false
+            referencedRelation: "messages"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {

@@ -79,7 +79,7 @@ export class ProfileService {
    */
   static async isUsernameAvailable(username: string): Promise<boolean> {
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('profiles')
         .select('username')
         .eq('username', username)

@@ -19,11 +19,14 @@
     "@openrouter/ai-sdk-provider": "1.0.0-beta.6",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.52.1",
+    "@vercel/functions": "^2.2.7",
     "ai": "^5.0.0",
     "next": "15.4.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "resumable-stream": "^2.2.3"
+    "resumable-stream": "^2.2.3",
+    "swr": "^2.3.4",
+    "zod": "^4.0.14"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

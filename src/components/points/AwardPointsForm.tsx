@@ -33,7 +33,7 @@ export default function AwardPointsForm() {
       } else {
         setMessage({ type: 'error', text: result.error || 'Failed to award points' })
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: 'error', text: 'An unexpected error occurred' })
     } finally {
       setLoading(false)
